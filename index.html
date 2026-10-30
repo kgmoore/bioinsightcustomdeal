@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BioInsight Custom Deal — VPN required</title>
+  <meta name="description" content="Illumina BioInsight custom deal service desk. Connect to Illumina VPN, then continue to the portal." />
+  <meta name="robots" content="noindex,nofollow" />
+  <style>
+    :root {
+      --pumpkin: #FF9600;
+      --warm-pumpkin: #FF740D;
+      --cobalt: #5164F8;
+      --blue-deep: #354092;
+      --blue-soft: #CDD3FF;
+      --tinted-white: #F4F4F0;
+      --off-white: #F6EEE4;
+      --dark: #333333;
+      --black: #111111;
+      --medium: #ADADAD;
+      --light: #D6D6D6;
+      --white: #FFFFFF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      color: var(--dark);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(255, 150, 0, 0.18), transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, rgba(81, 100, 248, 0.16), transparent 50%),
+        linear-gradient(165deg, var(--tinted-white) 0%, var(--off-white) 55%, #ECECF5 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.25rem;
+    }
+
+    main {
+      width: min(36rem, 100%);
+      background: var(--white);
+      border: 1px solid var(--light);
+      border-radius: 16px;
+      padding: 2.25rem 2rem 2rem;
+      box-shadow: 0 18px 50px rgba(17, 17, 17, 0.08);
+      animation: rise 420ms ease-out;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .mark {
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--pumpkin), var(--warm-pumpkin));
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--blue-deep);
+      line-height: 1.25;
+    }
+
+    .brand-text span {
+      display: block;
+      font-weight: 500;
+      color: var(--medium);
+      letter-spacing: 0.02em;
+      text-transform: none;
+      font-size: 0.78rem;
+    }
+
+    h1 {
+      font-size: clamp(1.35rem, 3.5vw, 1.7rem);
+      line-height: 1.25;
+      color: var(--black);
+      margin-bottom: 0.85rem;
+      font-weight: 700;
+    }
+
+    .warn {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      background: #FFF7ED;
+      border: 1px solid #FFD0AE;
+      border-left: 4px solid var(--pumpkin);
+      border-radius: 10px;
+      padding: 0.95rem 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .warn-icon {
+      flex-shrink: 0;
+      width: 1.35rem;
+      height: 1.35rem;
+      margin-top: 0.1rem;
+      color: var(--warm-pumpkin);
+    }
+
+    .warn p {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--black);
+      line-height: 1.4;
+    }
+
+    .detail {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: var(--dark);
+      margin-bottom: 1.5rem;
+    }
+
+    .detail strong { color: var(--black); }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 1.1rem;
+    }
+
+    a.btn, button.btn {
+      appearance: none;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.7rem 1.15rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      font-family: inherit;
+      transition: transform 120ms ease, background 120ms ease, box-shadow 120ms ease;
+    }
+
+    a.btn:hover, button.btn:hover { transform: translateY(-1px); }
+    a.btn:active, button.btn:active { transform: translateY(0); }
+
+    .btn-primary {
+      background: var(--cobalt);
+      color: var(--white);
+      box-shadow: 0 6px 16px rgba(81, 100, 248, 0.28);
+    }
+    .btn-primary:hover { background: var(--blue-deep); }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--blue-deep);
+      border: 1px solid var(--blue-soft);
+    }
+    .btn-secondary:hover { background: #F7F8FF; }
+
+    .status {
+      font-size: 0.88rem;
+      color: var(--medium);
+      min-height: 1.25rem;
+    }
+
+    .status strong { color: var(--dark); font-variant-numeric: tabular-nums; }
+
+    .footer {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--light);
+      font-size: 0.78rem;
+      color: var(--medium);
+      line-height: 1.45;
+    }
+
+    .footer a { color: var(--cobalt); }
+
+    @media print {
+      body { background: white; padding: 0; }
+      main { box-shadow: none; border: none; }
+      .actions, .status { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="brand">
+      <div class="mark" aria-hidden="true"></div>
+      <div class="brand-text">
+        BioInsight Custom Deal
+        <span>bioinsightcustomdeal.org</span>
+      </div>
+    </div>
+
+    <h1>Connect to Illumina VPN before continuing</h1>
+
+    <div class="warn" role="status">
+      <svg class="warn-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 9v4m0 4h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p>You need VPN activated for this redirect to work</p>
+    </div>
+
+    <p class="detail">
+      The BioInsight custom deal service desk lives on the Illumina network
+      (<strong>jira.illumina.com</strong>). If GlobalProtect is not connected, the next page will fail to load.
+      Turn VPN on, then continue.
+    </p>
+
+    <div class="actions">
+      <a class="btn btn-primary" id="continue" href="https://jira.illumina.com/servicedesk/customer/portal/2">
+        Continue to portal
+      </a>
+      <button type="button" class="btn btn-secondary" id="pause" hidden>Pause redirect</button>
+    </div>
+
+    <p class="status" id="status" aria-live="polite"></p>
+
+    <p class="footer">
+      Destination:
+      <a href="https://jira.illumina.com/servicedesk/customer/portal/2">jira.illumina.com/servicedesk/customer/portal/2</a>
+      · CUSTDEAL / Sales custom deal portal
+    </p>
+  </main>
+
+  <script>
+    (function () {
+      var PORTAL = "https://jira.illumina.com/servicedesk/customer/portal/2";
+      var DELAY_MS = 5000;
+      var remaining = Math.round(DELAY_MS / 1000);
+      var statusEl = document.getElementById("status");
+      var pauseBtn = document.getElementById("pause");
+      var timer = null;
+      var paused = false;
+
+      function renderStatus() {
+        if (paused) {
+          statusEl.innerHTML = "Redirect paused. Use <strong>Continue to portal</strong> when VPN is on.";
+          return;
+        }
+        statusEl.innerHTML = "Redirecting in <strong>" + remaining + "</strong>s…";
+      }
+
+      function go() {
+        window.location.href = PORTAL;
+      }
+
+      function tick() {
+        if (paused) return;
+        remaining -= 1;
+        if (remaining <= 0) {
+          statusEl.textContent = "Redirecting now…";
+          go();
+          return;
+        }
+        renderStatus();
+        timer = setTimeout(tick, 1000);
+      }
+
+      pauseBtn.hidden = false;
+      pauseBtn.addEventListener("click", function () {
+        paused = true;
+        if (timer) clearTimeout(timer);
+        pauseBtn.hidden = true;
+        renderStatus();
+      });
+
+      renderStatus();
+      timer = setTimeout(tick, 1000);
+    })();
+  </script>
+</body>
+</html>
